@@ -28,7 +28,7 @@ Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable W
 
 # 💥 Features 💥
 - Few ready made "_scripts/payloads_"
-- This is for **Finnish keyboard layout** (so other layouts need changes in _code.py_ and the layout libs)
+- This is for **Finnish keyboard layout** (so other layouts need changes in _duck.py_ and the layout libs)
 - Two modes: If the jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
 - 1337 h4x **Matrix** web layout so you can **FLEX ON NOOBS!!!** 💪
