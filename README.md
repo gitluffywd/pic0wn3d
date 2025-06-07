@@ -49,7 +49,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 
 🚫 I am not responsible for anything anybody does with this code.
 
-⁉️ Some times you may need to forget the hotspot if you are connecting with a phone since it won't load the web page...
+⁉️ Sometimes you may need to forget the hotspot if you are connecting with a phone since it won't load the web page...
 
 ❗️ When connected to the AP it will announce "_No internet access_", nevermind that.
 
