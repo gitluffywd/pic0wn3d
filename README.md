@@ -35,10 +35,10 @@ Code is based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pic
 
 # 💥 Features 💥
 - Few ready made "_scripts/payloads_"
-- This is for **Finnish keyboard layout** (so other layouts need changes in _duck.py_ and the layout libs)
+- This is for **Finnish keyboard layout** (other layouts need few changes in _duck.py_ + the layout libs)
 - Two modes: If the jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
-- 1337 h4x **Matrix** web layout so you can **FLEX ON NOOBS!!!** 💪
+- 1337 h4x **Matrix** web layout so you can @@FLEX ON NOOBS!!!@@ 💪
 - Layout is also responsive CSS so usage with phone is easy 👨‍🍼
 
 # ✍️ Installing & Usage ✍️
