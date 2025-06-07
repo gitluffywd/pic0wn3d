@@ -39,7 +39,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 7. Use jumper wire for **GPIO15** to "_AGGRO mode_" (load payload instantly when plugged in)
 8. Connect Pico W to the PC with a Micro USB cable
 9. Use your phone (or whatever) and connect to the AP
-10. Open your browser: [192.168.4.1)](http://192.168.4.1)
+10. Open your browser: [192.168.4.1](http://192.168.4.1)
 11. Time to **Rick Roll** 😂....
 
 ![AGGRO MODE](mode2.png)
