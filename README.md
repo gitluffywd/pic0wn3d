@@ -14,7 +14,7 @@
 # 📡 pic0wn3d 📡
 Raspberry Pi Pico W CircuitPython WiFi HID Remote Control
 
-Code based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)** ❤️
+Code is based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)** ❤️
 
 Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable Windows Security etc..
 
@@ -29,9 +29,9 @@ Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable W
 # 💥 Features 💥
 - Few ready made "_scripts/payloads_"
 - This is for **Finnish language** (for other languages change few lines in _code.py_ and find keyboard layout libs)
-- Two modes: If jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
+- Two modes: If the jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
-- 1337 h4x **Matrix** web layout so you can FLEX ON NOOBS!!! 💪
+- 1337 h4x **Matrix** web layout so you can **FLEX ON NOOBS!!!** 💪
 - Layout is also responsive CSS so usage with phone is easy 👨‍🍼
 
 # ✍️ Installing & Usage ✍️
@@ -42,7 +42,7 @@ Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable W
 5. Drag & drop files on the root of the drive..
 6. Rename the AP and password in _code.py_
 7. Use jumper wire for "_AGGRO mode_" (execute payload instantly when plugged) on **GPIO15** 
-8. Connect **Pico** to the PC with a Micro USB cable
+8. Connect your **Pico** to the PC with a Micro USB cable
 9. Use your phone (or whatever) and connect to the AP
 10. Open your browser: [192.168.4.1](http://192.168.4.1)
 11. Time to **Rick Roll** 😂....
@@ -66,3 +66,6 @@ Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable W
 🎷 **[youtube.com/flashdancer42](https://www.youtube.com/@flashdancer42)**
 
 📱 **[aurora.oops.wtf](https://aurora.oops.wtf)**
+
+🎹 **[soundcloud.com/siloquez](https://soundcloud.com/siloquez)**
+
