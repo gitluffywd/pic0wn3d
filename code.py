@@ -9,9 +9,9 @@ from duck import exe
 from adafruit_httpserver import Server, Request, JSONResponse, POST, Response
 
 # AP INIT
+# IF YOU DON'T KNOW WHAT YOU ARE DOING, CHANGE ONLY THESE!
 SSID = "QUANTUM_REALM"
 PASSWORD = "tailoredaccessoperations_69"
-
 
 # GPIO INIT
 led = digitalio.DigitalInOut(board.LED)
