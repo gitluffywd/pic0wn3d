@@ -12,7 +12,7 @@
 888
 ```
 # pic0wn3d
-Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck).
+Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)**.
 
 # 💻 Requirements
 - Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
@@ -43,10 +43,10 @@ Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI
 
 ---------------------
 
-If you uncomment boot.py (to hide the drive, you can't copy files to the device).
+If you uncomment _boot.py_ (to hide the drive, you can't copy files to the device).
 
 🚫 I am not responsible for anything anybody does with this code.
 
 👌 If you have some nice payload scripts or any suggestions hit me up!
 
-[aurora.oops.wtf](https://aurora.oops.wtf)
+**[aurora.oops.wtf](https://aurora.oops.wtf)**
