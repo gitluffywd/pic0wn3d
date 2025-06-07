@@ -12,11 +12,11 @@
 888
 ```
 # 📡 pic0wn3d 📡
-Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)**.
+Raspberry Pi Pico W CircuitPython Remote Control based on ❤️ **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)**
 
 # 💻 Requirements 💻
-- Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
-- CircuitPython 9.x (with adafruit_hid, adafruit_httpserver)
+- Raspberry Pi Pico W or Pico 2 W (H isn't really needed but _AGGRO mode_ wont work without)
+- CircuitPython 9.x (with _adafruit_hid_ & _adafruit_httpserver_)
 - _keyboard_layout_win_fi.py_ & _keycode_win_fi.py_ included in the lib directory
 - Micro USB cable (hi-speed/data transfer)
 - Target
@@ -24,7 +24,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 
 # 💥 Features 💥
 - Few ready made "_scripts/payloads_" (PS Persistent Shell, DNS Poison, WiFi keys, Disable Windows Security etc..)
-- This is setup for **Finnish language** (you need to figure out what your needs are yourself...)!
+- This is for **Finnish language** (for other languages change few lines in _code.py_ and find keyboard layout libs)
 - Two modes: If jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
 - 1337 h4x web layout so you can flex on noobs 💪
