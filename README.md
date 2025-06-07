@@ -44,6 +44,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI
 ---------------------
 
 If you uncomment boot.py (to hide the drive, you can't copy files to the device).
+
 🚫 I am not responsible for anything anybody does with this code.
 
 👌 If you have some nice payload scripts or any suggestions hit me up!
