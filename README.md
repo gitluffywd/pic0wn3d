@@ -16,14 +16,14 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 
 # 💻 Requirements 💻
 - Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
-- CircuitPython (with adafruit_hid, adafruit_httpserver)
+- CircuitPython 9.x (with adafruit_hid, adafruit_httpserver)
 - _keyboard_layout_win_fi.py_ & _keycode_win_fi.py_ included in the lib directory
 - Micro USB cable (hi-speed/data transfer)
 - Target
 - PC/Phone for remote control via the AP...
 
 # 💥 Features 💥
-- Few ready made "scripts/payloads"
+- Few ready made "_scripts/payloads_"
 - This is setup for **Finnish language** (you need to figure out what your needs are yourself...)!
 - Two modes: If jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
@@ -37,9 +37,10 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 4. Name it **pic0wn3d** (only needed for the premade scripts for file grabbing)
 5. Drag & drop files on the root of the drive..
 7. Use jumper wire for **GPIO15** to "_AGGRO mode_" (load payload instantly when plugged in)
-8. Connect Pico W on the PC
-9. Use phone (or whatever) to connect to the AP (192.168.4.1)
-10. Have fun........
+8. Connect Pico W to the PC with a Micro USB cable
+9. Use your phone (or whatever) and connect to the AP
+10. Open your browser: [192.168.4.1)](http://192.168.4.1)
+11. Time to **Rick Roll** 😂....
 
 ![AGGRO MODE](mode2.png)
 ---------------------
@@ -49,7 +50,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 
 🚫 I am not responsible for anything anybody does with this code.
 
-⁉️ Sometimes you may need to forget the hotspot if you are connecting with a phone since it won't load the web page...
+⁉️ Sometimes you may need to forget the hotspot if you are connecting with a phone since the page won't load..
 
 ❗️ When connected to the AP it will announce "_No internet access_", nevermind that.
 
