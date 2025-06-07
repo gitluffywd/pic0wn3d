@@ -23,7 +23,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 - PC/Phone for remote control via the AP...
 
 # 💥 Features 💥
-- Few ready made "_scripts/payloads_" (PowerShell revershell, DNS Poison, Persistent Shell, Disable Windows Security etc..)
+- Few ready made "_scripts/payloads_" (PS Persistent Shell, DNS Poison, WiFi keys, Disable Windows Security etc..)
 - This is setup for **Finnish language** (you need to figure out what your needs are yourself...)!
 - Two modes: If jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
