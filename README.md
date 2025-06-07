@@ -51,11 +51,11 @@ Includes few scripts like: PS Persistent Shell, DNS Poison, WiFi keys, Disable W
 ---------------------
 
 # 👨‍🔧 Notes.. 👨‍🔧
-‼️ If you uncomment _boot.py_ (to hide the drive, you can't copy files to the device).
+‼️ If you uncomment _boot.py_ to hide the drive, you can't copy files to the device.
 
 ⚠️ I am not responsible for anything anybody does with this code.
 
-⁉️ Sometimes you may need to forget the hotspot if you are connecting with a phone since the page won't load..
+⁉️ You may sometimes need to forget the AP (on your phone) if the web page isn't loading.
 
 🚫 When connected to the AP it will announce "_No internet access_", nevermind that.
 
