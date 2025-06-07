@@ -8,8 +8,8 @@
 888 d88P 888 Y88b.   Y88..88P Y88b 888 d88P 888  888 Y8b.     Y88b 888 
 88888P"  888  "Y8888P "Y88P"   "Y8888888P"  888  888  "Y8888   "Y88888 
 888                                                                    
-888      You don't know the power of the DARKSIDE!!!!                                                             
-888     
+888      You don't know the power of the DARKSIDE!!!!
+888
 ```
 # pic0wn3d
 Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck).
