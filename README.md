@@ -2,10 +2,10 @@
 Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck).
 
 # Requirements
-- Pico W (2 works as well)
+- Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
 - CircuitPython (with adafruit_hid, adafruit_httpserver)
 - keyboard_layout_win_fi.py & keycode_win_fi.py included in the lib directory
-- USB cable (hi speed/data transfer type)
+- USB cable
 - Target
 - PC/Phone for remote control via the AP...
 
