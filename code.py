@@ -10,7 +10,7 @@ from adafruit_httpserver import Server, Request, JSONResponse, POST, Response
 
 # AP INIT
 SSID = "QUANTUM_REALM"
-PASSWORD = "epich4x1337"
+PASSWORD = "tailoredaccessoperations_69"
 
 
 # GPIO INIT
