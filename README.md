@@ -18,7 +18,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 - Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
 - CircuitPython (with adafruit_hid, adafruit_httpserver)
 - _keyboard_layout_win_fi.py_ & _keycode_win_fi.py_ included in the lib directory
-- USB cable (hi-speed/data transfer)
+- Micro USB cable (hi-speed/data transfer)
 - Target
 - PC/Phone for remote control via the AP...
 
