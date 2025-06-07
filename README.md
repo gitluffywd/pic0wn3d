@@ -31,15 +31,15 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 - Layout is also responsive CSS so usage with phone is easy 👨‍🍼
 
 # ✍️ Installing & Usage ✍️
-- Get the .uf2 and libraries (adafruit_hid, adafruit_httpserver): [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico_w/)
-- Initialize the Pico by plugging it while pressing BOOTSEL button
-- Drag & drop the CircuitPython .uf2 on the drive
-- Name it **pic0wn3d** (only needed for the premade scripts for file grabbing)
-- Drag & drop files on the root of the drive..
-- Use jumper wire for **GPIO15** to "AGGRO mode" (load payload instantly when plugged in)
-- Connect Pico W on the PC
-- Use phone (or whatever) to connect to the AP (192.168.4.1)
-- Have fun........
+1. Get the .uf2 and libraries (adafruit_hid, adafruit_httpserver): [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico_w/)
+2. Initialize the Pico by plugging it while pressing BOOTSEL button
+3. Drag & drop the CircuitPython .uf2 on the drive
+4. Name it **pic0wn3d** (only needed for the premade scripts for file grabbing)
+5. Drag & drop files on the root of the drive..
+7. Use jumper wire for **GPIO15** to "AGGRO mode" (load payload instantly when plugged in)
+8. Connect Pico W on the PC
+9. Use phone (or whatever) to connect to the AP (192.168.4.1)
+10. Have fun........
 
 ---------------------
 
