@@ -14,7 +14,7 @@
 # pic0wn3d
 Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck).
 
-# Requirements
+# 💻 Requirements
 - Raspberry Pi Pico W or Pico 2 W (H isn't really needed but AGGRO mode wont work with it)
 - CircuitPython (with adafruit_hid, adafruit_httpserver)
 - keyboard_layout_win_fi.py & keycode_win_fi.py included in the lib directory
@@ -22,7 +22,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI
 - Target
 - PC/Phone for remote control via the AP...
 
-# Features
+# 💥 Features
 - Few ready made "scripts/payloads"
 - This is setup for Finnish language (you need to figure out what your needs are yourself...)
 - Two modes: If jumper wire is on GPIO15, AGGRO mode is on (payload executed instantly) 
@@ -30,7 +30,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI
 - Epic h4x layout for the web panel
 - Responsive CSS so usage with phone is easy
 
-# Installing & Usage
+# ✍️ Installing & Usage
 - Get the .uf2 and libraries (adafruit_hid, adafruit_httpserver) [CircuitPython](https://circuitpython.org/board/raspberry_pi_pico_w/)
 - Flash the Pico and drag & drop the .uf2 on the drive
 - Name it pic0wn3d (only needed for the premade scripts for file grabbing)
