@@ -11,7 +11,7 @@
 888      You don't know the power of the DARKSIDE!!!!
 888
 ```
-# ☢️ pic0wn3d ☢️
+# 📡 pic0wn3d 📡
 Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)**.
 
 # 💻 Requirements 💻
@@ -25,7 +25,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 # 💥 Features 💥
 - Few ready made "scripts/payloads"
 - This is setup for **Finnish language** (you need to figure out what your needs are yourself...)!
-- Two modes: If jumper wire is on **GPIO15**, AGGRO mode is on (payload executed instantly) 
+- Two modes: If jumper wire is on **GPIO15**, "_AGGRO mode_" is on (payload executed instantly) 
 - LED behaviour based on status of connected clients
 - 1337 h4x web layout so you can flex on noobs 💪
 - Layout is also responsive CSS so usage with phone is easy 👨‍🍼
@@ -36,7 +36,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 3. Drag & drop the CircuitPython .uf2 on the drive
 4. Name it **pic0wn3d** (only needed for the premade scripts for file grabbing)
 5. Drag & drop files on the root of the drive..
-7. Use jumper wire for **GPIO15** to "AGGRO mode" (load payload instantly when plugged in)
+7. Use jumper wire for **GPIO15** to "_AGGRO mode_" (load payload instantly when plugged in)
 8. Connect Pico W on the PC
 9. Use phone (or whatever) to connect to the AP (192.168.4.1)
 10. Have fun........
@@ -44,10 +44,17 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 ![AGGRO MODE](mode2.png)
 ---------------------
 
-If you uncomment _boot.py_ (to hide the drive, you can't copy files to the device).
+# 👨‍🔧 Notes.. 👨‍🔧
+‼️ If you uncomment _boot.py_ (to hide the drive, you can't copy files to the device).
 
 🚫 I am not responsible for anything anybody does with this code.
 
+⁉️ Some times you may need to forget the hotspot if you are connecting with a phone (I have Samsung Galaxy A15 and it won't load the site even if connected to the AP)
+
+❗️ When connected to the AP it will announce "_No internet access_", nevermind that.
+
 👌 If you have some nice payload scripts or any suggestions hit me up!
 
-**[aurora.oops.wtf](https://aurora.oops.wtf)**
+🎷 **[youtube.com/flashdancer42](https://www.youtube.com/@flashdancer42)**
+
+📱 **[aurora.oops.wtf](https://aurora.oops.wtf)**
