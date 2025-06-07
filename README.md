@@ -41,6 +41,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 9. Use phone (or whatever) to connect to the AP (192.168.4.1)
 10. Have fun........
 
+![AGGRO MODE](mode2.png)
 ---------------------
 
 If you uncomment _boot.py_ (to hide the drive, you can't copy files to the device).
