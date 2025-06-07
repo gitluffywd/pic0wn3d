@@ -29,7 +29,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on [majdsassi's Pico WIFI
 
 I am not responsible for anything anybody does with this code. 👌
 
-
+```
          d8b                                                       888 
          Y8P                                                       888 
                                                                    888 
@@ -41,7 +41,7 @@ I am not responsible for anything anybody does with this code. 👌
 888                                                                    
 888                                                                    
 888     
-
+```
 
 If you uncomment boot.py (to hide the drive, you can't copy files to the device)
 
