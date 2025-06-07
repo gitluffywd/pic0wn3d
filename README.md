@@ -36,6 +36,7 @@ Raspberry Pi Pico W CircuitPython Remote Control based on **[majdsassi's Pico WI
 3. Drag & drop the CircuitPython .uf2 on the drive
 4. Name it **pic0wn3d** (only needed for the premade scripts for file grabbing)
 5. Drag & drop files on the root of the drive..
+6. Rename the AP and password in _code.py_
 7. Use jumper wire for **GPIO15** to "_AGGRO mode_" (load payload instantly when plugged in)
 8. Connect Pico W to the PC with a Micro USB cable
 9. Use your phone (or whatever) and connect to the AP
