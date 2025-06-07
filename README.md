@@ -16,7 +16,14 @@ Raspberry Pi Pico W CircuitPython WiFi HID Remote Control
 
 Code is based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pico-WIFI-Duck)** ❤️
 
-Includes few scripts like: PS Persistent Shell injector+works with RevShells, DNS Poison, WiFi keys, Disable Windows Security etc..
+# 🔥 Includes scripts like 🔥
+- PowerShell Persistent shell injector (works with RevShells)
+- DNS Poison (PowerShell change DNS, you need to have your own "DNS" server still)
+- Change Proxy values
+- WiFi keys
+- Disable Windows Security
+- File Stealer
+- Rick Roll ofc...
 
 # 💻 Requirements 💻
 - Raspberry Pi Pico W or Pico 2 W (H isn't really needed but _AGGRO mode_ wont work without)
