@@ -3,8 +3,8 @@ import digitalio
 from board import *
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
-import keyboard_layout_win_fi
-from keycode_win_fi import Keycode
+import keyboard_layout_win_fi # CHANGE THiS ACCORDiNG YOUR SETUP
+from keycode_win_fi import Keycode # CHANGE THiS ACCORDiNG YOUR SETUP
 
 def exe(Payload_Script):
     duckyCommands = {
@@ -74,6 +74,8 @@ def exe(Payload_Script):
             newScriptLine = convertLine(line)
             runScriptLine(newScriptLine)
 
+    # FiNNiSH KEYBOARD LAYOUT SETUP
+    # CHANGE THESE 2 LiNES ACCORDiNG YOUR SETUP!
     kbd = Keyboard(usb_hid.devices)
     layout = keyboard_layout_win_fi.KeyboardLayout(kbd)
 
