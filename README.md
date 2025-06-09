@@ -58,6 +58,8 @@ Code is based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pic
 ---------------------
 
 # 👨‍🔧 Notes.. 👨‍🔧
+❗️ You may need to increase the _DELAY_ on the scripts depending on the machine!
+
 ‼️ If you uncomment _boot.py_ to hide the drive, you can't copy files to the device.
 
 ⚠️ I am not responsible for anything anybody does with this code.
