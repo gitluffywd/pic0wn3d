@@ -53,7 +53,6 @@ Code is based on **[majdsassi's Pico WIFI Duck](https://github.com/majdsassi/Pic
 9. Use your phone (or whatever) and connect to the AP
 10. Open your browser: [192.168.4.1](http://192.168.4.1)
 11. Time to **Rick Roll** 😂....
-12. Upload wifikeys.ps1 to your server (or use it manually)
 
 ![AGGRO MODE](mode2.png)
 ---------------------
